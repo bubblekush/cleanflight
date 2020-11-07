@@ -42,7 +42,7 @@
 
 #ifdef STM32F3
 #define MINIMAL_CLI
-#define USE_DSHOT
+#undefine USE_DSHOT
 #define USE_GYRO_DATA_ANALYSE
 #define USE_CCM_CODE
 #endif
@@ -203,11 +203,11 @@
 #define USE_IMU_CALC
 #define USE_PPM
 #define USE_SERIAL_RX
-#define USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
-#define USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+#undefine USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undefine USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
 #define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
-#define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
-#define USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undefine USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+#undefine USE_SERIALRX_SUMD       // Graupner Hott protocol
 
 #if (TARGET_FLASH_SIZE > 128)
 #define PID_PROFILE_COUNT 3
@@ -232,10 +232,13 @@
 #if (TARGET_FLASH_SIZE > 128)
 #define USE_GYRO_OVERFLOW_CHECK
 #define USE_YAW_SPIN_RECOVERY
-#define USE_DSHOT_DMAR
+#undefine USE_DSHOT_DMAR
 #define USE_SERIALRX_FPORT      // FrSky FPort
-#define USE_TELEMETRY_CRSF
-#define USE_TELEMETRY_SRXL
+#undefine USE_TELEMETRY_CRSF
+#undefine USE_TELEMETRY_SRXL
+#define USE_GPS
+#define USE_GPS_UBLOX
+#define USE_GPS_RESCUE
 
 #if ((TARGET_FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 12))
 #define USE_CMS
@@ -330,7 +333,7 @@
 #define USE_AIRMODE_LPF
 #define USE_CANVAS
 #define USE_DASHBOARD
-#define USE_FRSKYOSD
+#undefine USE_FRSKYOSD
 #define USE_GPS
 #define USE_GPS_NMEA
 #define USE_GPS_UBLOX
